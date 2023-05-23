@@ -1,2 +1,2 @@
 # asr-web-api-java-demo
-ASR WebApi JAVA 示例代码
+ASR WebApi Java 示例代码
