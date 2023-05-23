@@ -102,6 +102,10 @@ public class WebSocketExample {
             @Override
             public void afterProcessSpeechEnd(WebsocketServerFrame serverFrame) {
                 log.info("收到识别结束：{}", serverFrame);
+                if (result.length() > 0) {
+                    result.append("。");
+                }
+                log.info("最终语音识别结果：{}", result);
                 try {
                     client.close();
                     // 因为时示例代码，所以结束后退出程序
