@@ -50,6 +50,16 @@ public class HttpFormDataExample {
         }
     }
 
+    /**
+     * 构建请求参数
+     *
+     * @param btId 业务方唯一标识id
+     * @param accessKey 密钥accessKey
+     * @param accessKeySecret 密钥accessKeySecret
+     * @param appCode 应用标识
+     * @param channelCode 渠道标识
+     * @return 请求参数
+     */
     private static Map<String, String> buildFormData(String btId, String accessKey, String accessKeySecret, String appCode, String channelCode) {
         Map<String, String> formData = new HashMap<>();
         SignatureUtil.SignResult signResult = SignatureUtil.generateSignature(accessKey, accessKeySecret, appCode);

@@ -51,6 +51,18 @@ public class FeedbackExample {
         }
     }
 
+    /**
+     * 构建请求参数
+     *
+     * @param btId 业务方唯一标识id
+     * @param requestId 请求标识
+     * @param exactType 是否识别准确，0: 准确 1: 不准确
+     * @param accessKey 密钥accessKey
+     * @param accessKeySecret 密钥accessKeySecret
+     * @param appCode 应用标识
+     * @param channelCode 渠道标识
+     * @return 请求参数
+     */
     private static String buildJsonParam(String btId, String requestId, Integer exactType, String accessKey, String accessKeySecret, String appCode, String channelCode) {
         FeedbackRequest request = new FeedbackRequest();
         SignatureUtil.SignResult signResult = SignatureUtil.generateSignature(accessKey, accessKeySecret, appCode);
