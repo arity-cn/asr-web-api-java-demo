@@ -59,7 +59,7 @@ public class WebSocketClient {
                             pipeline.addLast(sslContext.newHandler(ch.alloc()));
                             // 添加一个http的编解码器
                             pipeline.addLast(new HttpClientCodec());
-//                            // 添加一个用于支持大数据流的支持
+                            // 添加一个用于支持大数据流的支持
                             pipeline.addLast(new ChunkedWriteHandler());
                             // 添加一个聚合器，这个聚合器主要是将HttpMessage聚合成FullHttpRequest/Response
                             pipeline.addLast(new HttpObjectAggregator(1024 * 64));
