@@ -78,7 +78,7 @@ public class WebSocketClient {
             handler.handshakeFuture().sync();
             log.info("握手成功");
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("", e);
         }
     }
 
