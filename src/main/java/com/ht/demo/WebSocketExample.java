@@ -53,7 +53,7 @@ public class WebSocketExample {
                 log.info("处理服务端准备好进行语音识别报文");
                 if (StatusEnum.SUCCESS.getCode().equals(serverFrame.getStatus())) {
                     try {
-                        List<ByteBuf> byteBufList = FileUtil.readFileToByteBuf("audio/BAC009S0002W0164.wav", 1024 * 10);
+                        List<ByteBuf> byteBufList = FileUtil.readFileToByteBuf("audio/ARITY2023S001W0001.wav", 1024 * 10);
                         for (ByteBuf byteBuf : byteBufList) {
                             client.sendMessage(byteBuf);
                         }

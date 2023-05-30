@@ -67,7 +67,7 @@ public class HttpApplicationJsonExample {
             request.setChannelCode(channelCode);
             request.setContentType("RAW");
             request.setFormatInfo("WAV");
-            request.setContent(FileUtil.readFileToBase64("audio/BAC009S0002W0164.wav"));
+            request.setContent(FileUtil.readFileToBase64("audio/ARITY2023S001W0001.wav"));
             request.setTimestamp(signResult.getTimestamp());
             request.setSign(signResult.getSignature());
             return JSON.toJSONString(request);

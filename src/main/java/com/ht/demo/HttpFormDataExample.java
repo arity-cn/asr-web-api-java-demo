@@ -30,8 +30,8 @@ public class HttpFormDataExample {
         String appCode = "appCode(请替换为正确的appCode)";
         String channelCode = "channelCode(请替换为正确的channelCode)";
         Map<String, String> formData = buildFormData(btId, accessKey, accessKeySecret, appCode, channelCode);
-        byte[] file = FileUtil.readFileToBytes("audio/BAC009S0002W0164.wav");
-        CloseableHttpResponse httpResponse = HTTP_CLIENT.post(url, formData, file, "BAC009S0002W0164.wav");
+        byte[] file = FileUtil.readFileToBytes("audio/ARITY2023S001W0001.wav");
+        CloseableHttpResponse httpResponse = HTTP_CLIENT.post(url, formData, file, "ARITY2023S001W0001.wav");
         if (httpResponse.getStatusLine().getStatusCode() == 200) {
             String responseBody = EntityUtils.toString(httpResponse.getEntity());
             if (responseBody == null || responseBody.length() == 0) {
